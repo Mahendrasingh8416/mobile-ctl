@@ -1,54 +1,13 @@
-import Header from "../components/Header";
+import Header from "@/components/Header";
 
-export default function Home() {
+
+export default function Page() {
   return (
-    // <div className="container-fluid p-0 ">
 
-      <div className= "container-fluid bg-white p-0">
-
+<>
         <Header />
+</>
 
 
-      <h1>hello ramm rajkkosdiofonfosoifpaisdbpisdio </h1>
-
-        {/* <main> */}
-
-          {/* <section className="p-0">
-            <Hero />
-          </section>
-
-          <section>
-            <CategoryStrip />
-          </section>
-
-          <section>
-            <BlueprintSection />
-          </section>
-
-          <section>
-            <ProcessSection />
-          </section>
-
-          <section>
-            <Services />
-          </section>
-
-          <section>
-            <Testimonials />
-          </section>
-
-          <section>
-            <CTASection />
-          </section>
-
-        </main>
-
-        <Footer /> */
-      //  
-       }
-
-      {/* </div> */}
-   </div>
-  );
+  )
 }
-
