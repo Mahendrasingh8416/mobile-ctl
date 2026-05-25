@@ -5,6 +5,7 @@ const page = () => {
   return (
     <><fbanner />
     <div>page</div>
+    <h1>heyyy</h1>
     </>
 
   )
