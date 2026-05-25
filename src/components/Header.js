@@ -10,8 +10,7 @@ export default function Header() {
 
   return (
     <div className="header">
-      <nav className="navbar navbar-expand-lg bg-dark nav-custom ">
-
+      <nav className="navbar navbar-expand-lg navbar-dark nav-custom">
         <Link href="/" className="navbar-brand">
           <Image
             src="/images/logo.webp"
@@ -30,93 +29,88 @@ export default function Header() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className={`collapse navbar-collapse ${open ? "show" : ""}`}>
-       <ul className="navbar-nav ms-auto">
+        {/* Change: Added maxHeight and overflowY so content doesn't clip on small screens */}
+        <div className={`collapse navbar-collapse mobile-nav-scroll ${open ? "show" : ""}`}>
 
-  <li className="nav-item mx-3 c text-white" >
-    <Link href="/about" className="nav-link" onClick={handleClose}>
-      About Us
-    </Link>
-  </li>
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item mx-3">
+              <Link href="/about" className="nav-link" onClick={handleClose}>
+                About Us
+              </Link>
+            </li>
 
-  {/* What We Do Dropdown */}
-  <li className="nav-item dropdown mx-3 ">
-    <Link
-      href="#"
-      className="nav-link dropdown-toggle"
-      role="button"
-      data-bs-toggle="dropdown"
-      aria-expanded="false"
-    >
-      What we do
-    </Link>
+            {/* What We Do Dropdown */}
+            <li className="nav-item dropdown mx-3">
+              <Link
+                href="#"
+                className="nav-link dropdown-toggle"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                What we do
+              </Link>
 
-    <ul className="dropdown-menu">
+              <ul className="dropdown-menu">
+                <li>
+                  <Link
+                    href="https://custom-tech-labs-eta.vercel.app/custom-website-development-service"
+                    className="dropdown-item"
+                    onClick={handleClose}
+                  >
+                    Custom Websites
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://custom-tech-labs-eta.vercel.app/custom-app-development-service"
+                    className="dropdown-item"
+                    onClick={handleClose}
+                  >
+                    Custom Applications
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://custom-tech-labs-eta.vercel.app/system-integration-service"
+                    className="dropdown-item"
+                    onClick={handleClose}
+                  >
+                    System Integrations
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="https://custom-tech-labs-eta.vercel.app/ecommerce-solution-service"
+                    className="dropdown-item"
+                    onClick={handleClose}
+                  >
+                    eCommerce Solutions
+                  </Link>
+                </li>
+              </ul>
+            </li>
 
-      <li>
-        <Link
-        href="#"
-          className="dropdown-item"
-          onClick={handleClose}
-        >
-          Custom Websites
-        </Link>
-      </li>
+            <li className="nav-item mx-3">
+              <Link href="#" className="nav-link" onClick={handleClose}>
+                Our Results
+              </Link>
+            </li>
 
-      <li>
-        <Link
- href="#"          className="dropdown-item"
-          onClick={handleClose}
-        >
-          Custom Applications
-        </Link>
-      </li>
+            <li className="nav-item mx-3">
+              <Link href="#" className="nav-link" onClick={handleClose}>
+                Insight
+              </Link>
+            </li>
 
-      <li>
-        <Link
-          href="#"
-          className="dropdown-item"
-          onClick={handleClose}
-        >
-          System Integrations
-        </Link>
-      </li>
-
-      <li>
-        <Link
-          href="#"
-          className="dropdown-item"
-          onClick={handleClose}
-        >
-          eCommerce Solutions
-        </Link>
-      </li>
-
-    </ul>
-  </li>
-
-  <li className="nav-item mx-3">
-    <Link href="#" className="nav-link" onClick={handleClose}>
-      Our Results
-    </Link>
-  </li>
-
-  <li className="nav-item mx-3">
-    <Link href="#" className="nav-link" onClick={handleClose}>
-      Insight
-    </Link>
-  </li>
-
-  <li className="ms-lg-3 mt-3 mt-lg-0">
-    <Link href="#" className="btn btn-warning-custom">
-      Contact Us
-    </Link>
-  </li>
-
-</ul>
-
+            {/* Change: Added mb-4 (margin-bottom) here to prevent the button from touching the bottom boundary */}
+            <li className="ms-lg-3 mt-3 mt-lg-0 mb-4 mb-lg-0">
+              <Link href="#" className="btn btn-warning-custom">
+                Contact Us
+              </Link>
+            </li>
+          </ul>
         </div>
-
       </nav>
     </div>
   );
