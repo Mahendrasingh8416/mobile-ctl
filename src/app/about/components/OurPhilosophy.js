@@ -4,7 +4,7 @@ export default function OurPhilosophy() {
   return (
     <section className="container-fluid py-5 px-3 px-md-5">
       <div className="container">
-        <div className="row justify-content-center ">
+        <div className="row justify-content-center">
           <div className="col-auto">
             {/* Heading */}
             <h1 className="our-philosophy-heading">Our Philosophy</h1>
@@ -47,11 +47,11 @@ export default function OurPhilosophy() {
           <div className="col-12 col-lg-5 text-center">
             <div
               className="position-relative mx-auto"
-              style={{ maxWidth: "450px" }}
+              style={{ maxWidth: "450px", minHeight: "307px" }} // minHeight add kiya taaki absolute image overflow na kare
             >
               <Image
                 className="img-fluid shadow-sm"
-                src="/images/philosophy1.webp "
+                src="/images/philosophy1.webp" // ❌ Space hata diya gaya hai
                 width={409}
                 height={307}
                 alt="Our Philosophy"
@@ -60,6 +60,7 @@ export default function OurPhilosophy() {
                   position: "absolute",
                   top: "-173px",
                   left: "0",
+                  height: "auto", // Aspect ratio lock rakhne ke liye warning fix
                 }}
               />
             </div>

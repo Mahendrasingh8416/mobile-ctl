@@ -1,4 +1,4 @@
-import Header from "../../components/Header";
+import Header from "../glocompo/Header";
 // These are located in app/about/components/
 import Hero from "./components/Hero";
 import Mission from "./components/Mission";
@@ -8,8 +8,7 @@ import WhatWeDo from "./components/WhatWeDo";
 import WhatDesign from "./components/WhatDesign";
 import OurPhilosophy from "./components/OurPhilosophy";
 
-import ImpactSection from "../../components/ImpactSection";
-import Footer from "../../components/Footer";
+import Footer from "../glocompo/footer";
 import CategoryStrip from "./components/CategoryStrip";
 
 export default function About() {

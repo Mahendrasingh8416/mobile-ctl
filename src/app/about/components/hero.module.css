@@ -1,5 +1,5 @@
 .hero-section { 
-  background-image: url('/images/about-banner.webp'); 
+  background-image: url('/images/moimg/ok.png'); /* Path absolute rakha hai */
   background-size: cover; 
   background-position: center right; 
   background-repeat: no-repeat; 
@@ -26,7 +26,7 @@
   } 
 
   .hero-mobile-img { 
-    background-image: url('/images/about-banner.webp'); /* Path absolute rakha hai */
+    background-image: url('/images/moimg/ok.png'); /* Path absolute rakha hai */
     background-size: cover; 
     background-position: center; 
     width: 100%; 

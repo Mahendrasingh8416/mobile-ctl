@@ -25,7 +25,7 @@ export default function WhatWeDo() {
       <div className="row justify-content-center text-center mb-5">
         <div className="col-12 col-lg-10">
           {/* Header Badge */}
-          <h1 class="what-we-do-heading fw-bold">What We Do</h1>
+          <h1 className="what-we-do-heading fw-bold">What We Do</h1>
 
           <h3 className="px-md-5 text-start fw-bold  whatFontText">
             We design and build custom enterprise solutions for small to
