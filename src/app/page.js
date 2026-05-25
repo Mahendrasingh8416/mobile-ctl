@@ -1,9 +1,51 @@
+import Header from "../components/Header";
+
 export default function Home() {
   return (
-    <div className="container mt-5 text-center">
-      <h1 className="text-primary">Bootstrap Working ✅</h1>
-      <p className="lead">Next.js + Bootstrap successfully installed</p>
-      <button className="btn btn-success">Click kar na sale</button>
-    </div>
+    // <div className="container-fluid p-0 ">
+
+      <div className= "container-fluid bg-white p-0">
+
+        <Header />
+
+        {/* <main> */}
+
+          {/* <section className="p-0">
+            <Hero />
+          </section>
+
+          <section>
+            <CategoryStrip />
+          </section>
+
+          <section>
+            <BlueprintSection />
+          </section>
+
+          <section>
+            <ProcessSection />
+          </section>
+
+          <section>
+            <Services />
+          </section>
+
+          <section>
+            <Testimonials />
+          </section>
+
+          <section>
+            <CTASection />
+          </section>
+
+        </main>
+
+        <Footer /> */
+      //  
+       }
+
+      {/* </div> */}
+   </div>
   );
 }
+
