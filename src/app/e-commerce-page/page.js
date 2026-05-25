@@ -6,6 +6,11 @@ const page = () => {
     <><fbanner />
     <div>page</div>
     <h1>heyyy</h1>
+    <h1>heyyy</h1>
+    
+    <h1>heyyy</h1>
+    <h1>heyyy</h1>
+    <h1>heyyy</h1>
     </>
 
   )
