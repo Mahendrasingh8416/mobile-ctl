@@ -298,3 +298,13 @@
 }
 
 /* uper ka kode na chede header ka hai or neche kod likhe tho commet kr ke btao kis ka hai */
+
+
+
+@media(max-width:768px){
+  .hero-box{
+ 
+  background-size: cover;
+  width: 100%;
+  }
+}

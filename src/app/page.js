@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 
 
 export default function Page() {
@@ -6,6 +7,7 @@ export default function Page() {
 
 <>
         <Header />
+        <Hero/>
 </>
 
 
