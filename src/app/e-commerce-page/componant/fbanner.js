@@ -27,7 +27,49 @@ export default function Fbanner() {
             <p className="fontmainText text-center text-lg-start mb-4">
               Your e-commerce system shouldn’t slow you down- <br></br> it should move your business forward.
             </p>
-            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </p>
+            <p className="fontmainText text-center text-lg-start mb-4">
+              Your e-commerce system shouldn’t slow you down- <br></br> it should move your business forward.
+            </p>
+
+            </p>
+            <p className="fontmainText text-center text-lg-start mb-4">
+              Your e-commerce system shouldn’t slow you down- <br></br> it should move your business forward.
+            </p>
+
+            </p>
+            <p className="fontmainText text-center text-lg-start mb-4">
+              Your e-commerce system shouldn’t slow you down- <br></br> it should move your business forward.
+            </p>
+
+
+
+
+
 
             {/* Buttons */}
             <div className="d-flex flex-column align-items-center flex-lg-row gap-3 mt-4"style={{width:"50%"}}>
