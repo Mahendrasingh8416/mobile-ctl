@@ -300,11 +300,65 @@
 /* uper ka kode na chede header ka hai or neche kod likhe tho commet kr ke btao kis ka hai */
 
 
-
 @media(max-width:768px){
   .hero-box{
- 
-  background-size: cover;
-  width: 100%;
+    background-image: url("/images/mobilebanner.png");
+    background-size: cover;
+    width: 100%;
+    margin: auto;
+    height:80vh;
   }
+  .img-txt h1{
+    font-size: 35px;
+   text-align: center;
+   font-size: solid black 6px;
+  
+   font-family: "Albert Sans", sans-serif;
+
+   }
+.para {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  font-size: 19px;
+}
+
+
+.hero-btn{
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.custom-btn {
+  width: 138px;
+  height: 30px; 
+  background: #eef430;
+  border-radius: 3px;
+  border: none;
+
+  font-family: "Albert Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  color: #000000;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.custom-btn:hover {
+  opacity: 0.9;
+}
+
+.category-top {
+  height: 22px;
+  background: black;
+}
+
+.category-bottom {
+  height: 17px;
+  background: #eef430;
+}
 }
