@@ -1,10 +1,10 @@
 import React from 'react'
-import fbanner from ".componant/fbanner"
+import Fbanner from './componant/fbanner'
 
 const page = () => {
   return (
-    <><fbanner />
-    <div>page</div>
+    <><Fbanner />
+    
     
     </>
 
