@@ -30,7 +30,7 @@ export default function BlueprintSection() {
       {/* Content */}
       <div className="col-md-5">
         <h4 className="mb-3">
-          Custom websites, applications, and integrations designed with a "people first" mindset.
+          Custom websites, applications, and integrations designed with a  people first  mindset.
         </h4>
 
         <p className="mb-3">
@@ -38,7 +38,7 @@ export default function BlueprintSection() {
         </p>
 
         <p className="mb-0">
-          Our approach ensures the final product isn't just technically sound, but creates an experience that makes users want to return again and again.
+          Our approach ensures the final product is not just technically sound, but creates an experience that makes users want to return again and again.
         </p>
       </div>
 

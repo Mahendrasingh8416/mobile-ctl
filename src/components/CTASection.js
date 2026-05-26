@@ -14,7 +14,7 @@ export default function CTASection() {
             </h2>
 
       <p className="cta-subtext">
-  Let's take the first step toward a smarter, more human-centered digital future.
+  Lets take the first step toward a smarter, more human-centered digital future.
 </p>
 
 

@@ -9,7 +9,7 @@ export default function ProcessContainer() {
       <div className="accent-bar left-accent"></div>
       <div className="content">
         <span className="step-label">STEP 1:</span>
-        <h2 className="title">We Listen for the "Why"</h2>
+        <h2 className="title">We Listen for the Why</h2>
         <p className="description">
           Before we touch a keyboard, we figure out why you’re building this in the first place.
           We dig for the friction in your current process so we can create a solution that actually clears the path.
