@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <>
       <section
-        className="hero"
+        className="hero0"
         style={{ backgroundImage: "url('/appsimg/main.png')" }}
       >
         <div className="container px-5 py-5">
