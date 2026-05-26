@@ -25,9 +25,7 @@ export default function Page() {
            <section>
             <ProcessSection />
           </section>
-           {/* <section>
-            <Services />
-          </section> */}
+          
 
 </>
 
