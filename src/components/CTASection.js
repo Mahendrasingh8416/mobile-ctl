@@ -34,7 +34,7 @@ export default function CTASection() {
           {/* Right Image */}
           <div className="col-lg-5">
             <Image
-              src="/images/team.png"  // put your image in /public/images/
+              src="/images/team.png"  
               alt="Team Work"
               width={600}
               height={400}
