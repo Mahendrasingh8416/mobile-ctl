@@ -10,7 +10,8 @@ export default function Header() {
 
   return (
     <div className="header">
-      <nav className="navbar navbar-expand-lg navbar-dark nav-custom">
+      <nav className="navbar navbar-expand-lg navbar-dark nav-custom d-flex align-items-center justify-content-between">
+        {/* 1. LOGO */}
         <Link href="/" className="navbar-brand">
           <Image
             src="/images/logo.webp"
@@ -21,26 +22,32 @@ export default function Header() {
           />
         </Link>
 
-        <button
-          className="navbar-toggler"
-          onClick={() => setOpen(!open)}
-          aria-expanded={open}
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+        {/* 2. CONTACT US BUTTON & HAMBURGER (Yeh mobile aur desktop dono par bahar rahega) */}
+        <div className="d-flex align-items-center gap-3 ms-auto ms-lg-0 order-lg-3">
+          <Link href="#" className="btn btn-warning-custom">
+            Contact Us
+          </Link>
 
-        {/* Change: Added maxHeight and overflowY so content doesn't clip on small screens */}
-        <div className={`collapse navbar-collapse mobile-nav-scroll ${open ? "show" : ""}`}>
+          <button
+            className="navbar-toggler"
+            onClick={() => setOpen(!open)}
+            aria-expanded={open}
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
+        </div>
 
-          <ul className="navbar-nav ms-auto">
-            <li className="nav-item mx-3">
+        {/* 3. NAVIGATION LINKS (Yeh sirf mobile par collapse hoga) */}
+        <div className={`collapse navbar-collapse order-lg-2 ms-lg-auto ${open ? "show" : ""}`}>
+          <ul className="navbar-nav mb-2 mb-lg-0">
+            <li className="nav-item mx-lg-3">
               <Link href="/about" className="nav-link" onClick={handleClose}>
                 About Us
               </Link>
             </li>
 
             {/* What We Do Dropdown */}
-            <li className="nav-item dropdown mx-3">
+            <li className="nav-item dropdown mx-lg-3">
               <Link
                 href="#"
                 className="nav-link dropdown-toggle"
@@ -91,22 +98,15 @@ export default function Header() {
               </ul>
             </li>
 
-            <li className="nav-item mx-3">
+            <li className="nav-item mx-lg-3">
               <Link href="#" className="nav-link" onClick={handleClose}>
                 Our Results
               </Link>
             </li>
 
-            <li className="nav-item mx-3">
+            <li className="nav-item mx-lg-3">
               <Link href="#" className="nav-link" onClick={handleClose}>
                 Insight
-              </Link>
-            </li>
-
-            {/* Change: Added mb-4 (margin-bottom) here to prevent the button from touching the bottom boundary */}
-            <li className="ms-lg-3 mt-3 mt-lg-0 mb-4 mb-lg-0">
-              <Link href="#" className="btn btn-warning-custom">
-                Contact Us
               </Link>
             </li>
           </ul>
