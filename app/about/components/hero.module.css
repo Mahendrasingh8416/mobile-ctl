@@ -1,11 +1,12 @@
+/* --- Desktop Styles --- */
 .heroSection {
   background-image: url("/images/about-banner.webp");
   background-size: cover;
   background-position: center right;
   background-repeat: no-repeat;
-  min-height: 80vh;
   display: flex;
   align-items: center;
+  padding: 80px 0;
 }
 
 .heroTitle {
@@ -18,27 +19,49 @@
   max-width: 280px;
 }
 
+/* --- Mobile / Tablet Styles (< 991px) --- */
 @media (max-width: 991.98px) {
   .heroSection {
     background-image: none !important;
-    background-color: #ffffff;
-    min-height: auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    background-color: transparent !important; /* Koi ajeeb white box nahi banega */
+    padding: 10px 0;
   }
 
+  /* Text aur Image ko aapas me overlap karne wala main box */
+  .heroMobileWrapper {
+    position: relative;
+    width: 100%;
+    height: 320px; /* Aapki image ki height */
+    display: flex;
+    align-items: center; /* Text ko vertical beech me lane ke liye */
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 12px; /* Image ke corners rounded karne ke liye */
+  }
+
+  /* Background Image standard layer ke roop me */
   .heroMobileImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url("/images/mobileimg/plo.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 300px;
-    border-radius: 8px;
-    display: block;
+    z-index: 1;
   }
 
+  /* Title ab pure container me absolute hokar image ke upar float karega */
   .heroTitle {
-    font-size: 2rem;
+    position: relative;
+    z-index: 2; /* Image ke upar dikhne ke liye */
+    font-size: 1.8rem;
+    color: #000000; /* Dusri photo ki tarah black text */
+    text-align: center;
+    padding: 0 15px; /* Side se text thoda andar rahe */
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6); /* Text ko image par acche se dikhane ke liye halka white shadow */
+    margin: 0 !important;
   }
 }
