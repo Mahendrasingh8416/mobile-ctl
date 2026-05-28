@@ -2,7 +2,7 @@
 import "../app/process.css";
 export default function ProcessContainer() {
   return (
-    <div className="process-container py-0">
+    <div className="process-container py-0 px-4">
 
   <div className="step-wrapper right">
     <div className="card">

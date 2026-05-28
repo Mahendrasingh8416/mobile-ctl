@@ -12,7 +12,7 @@ export default function BlueprintSection() {
       </div>
 
       {/* Section */}
-   <section className="blueprint-section ">
+   <section className="blueprint-section px-4 mb-3">
   <div className="container-blueprint">
     <div className="row align-items-center">
 
