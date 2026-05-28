@@ -31,46 +31,76 @@ const philosophyData = [
     {
         img: '/web/a6.png',
         title: "We Optimize In Practice, Not Theory. ",
-        description: "User behavior is our compass. Every click and scroll guides us.",
+        description: "User behavior is our compass. Every click and scroll guides us.",
     },
 ];
 
 export default function WebDevelopmentPhilosophy() {
     return (
-        <section className="container-fluid my-5 p-0 overflow-hidden" style={{ backgroundColor: '#f3f3f3' }}>
+        <section
+            className="container-fluid my-5 p-0 overflow-hidden"
+            style={{ backgroundColor: '#f3f3f3' }}
+        >
 
             {/* Top Header */}
-            <div className="w-100 bg-black py-2 py-md-3 px-4">
-                <h1 className="text-white text-center fw-bold mb-0" style={{ fontSize: '30px' }}>
+            <div className="w-100 bg-black py-3 px-3 px-md-4">
+                <h1
+                    className="text-white text-center fw-bold mb-0"
+                    style={{ fontSize: 'clamp(1.4rem, 3vw, 2rem)' }}
+                >
                     Our Web Development Philosophy
                 </h1>
             </div>
 
-            <div className="container py-5 mt-4" style={{ width: "90%" }}>
+            <div className="container py-4 py-md-5" style={{ width: "92%" }}>
 
                 {/* Subtitle */}
-                <h2 className="text-center fst-italic text-dark mb-5 px-md-5" style={{ fontSize: '25px', lineHeight: '1.3', marginTop: "-4%" }}>
+                <h2
+                    className="text-center fst-italic text-dark mb-4 mb-md-5 px-2 px-md-5"
+                    style={{
+                        fontSize: 'clamp(1rem, 2vw, 1.6rem)',
+                        lineHeight: '1.4'
+                    }}
+                >
                     Built on the same principles that guide every platform we develop.
                 </h2>
 
                 {/* Grid Cards */}
-                <div className="row g-4 " style={{ marginLeft: "30px", marginRight: "30px" }}>
+                <div className="row g-4 px-0 px-md-3">
                     {philosophyData.map((item, idx) => (
                         <div key={idx} className="col-12 col-md-6">
-                            <div className="border border-dark h-100 p-2 p-lg-2 d-flex flex-column transition-hover bg-transparent">
+                            <div className="border border-dark h-100 p-3 d-flex flex-column transition-hover bg-transparent philosophy-card">
 
                                 {/* Yellow Icon Box */}
-                                <div className="d-flex align-items-center justify-content-center flex-shrink-0 mb-4"
-                                    style={{ width: '48px', height: '48px', backgroundColor: '#EEF430' }}>
-                                    <Image src={item.img} width={30} height={30} alt="icon" style={{ objectFit: 'contain' }} />
+                                <div
+                                    className="d-flex align-items-center justify-content-center flex-shrink-0 mb-4"
+                                    style={{
+                                        width: '48px',
+                                        height: '48px',
+                                        backgroundColor: '#EEF430'
+                                    }}
+                                >
+                                    <Image
+                                        src={item.img}
+                                        width={30}
+                                        height={30}
+                                        alt="icon"
+                                        style={{ objectFit: 'contain' }}
+                                    />
                                 </div>
 
                                 {/* Content */}
                                 <div>
-                                    <h3 className="fw-bold text-black mb-3" style={{ fontSize: '1.5rem' }}>
+                                    <h3
+                                        className="fw-bold text-black mb-3"
+                                        style={{ fontSize: 'clamp(1.1rem, 2vw, 1.5rem)' }}
+                                    >
                                         {item.title}
                                     </h3>
-                                    <p className="text-secondary mb-0 lh-lg" style={{ fontSize: '1rem' }}>
+                                    <p
+                                        className="text-secondary mb-0 lh-lg"
+                                        style={{ fontSize: 'clamp(0.95rem, 1.5vw, 1rem)' }}
+                                    >
                                         {item.description}
                                     </p>
                                 </div>
@@ -80,18 +110,25 @@ export default function WebDevelopmentPhilosophy() {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="mt-1 pt-4 d-flex flex-column flex-sm-row justify-content-center gap-3">
+                <div className="mt-4 pt-3 d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3">
                     <Link
                         href="/"
-                        className="btn fw-bold d-flex align-items-center justify-content-center hover-scale border-0 text-black shadow-sm"
-                        style={{ backgroundColor: '#EEF430', width: '200px', height: '35px', borderRadius: '6px' }}
+                        className="btn fw-bold d-flex align-items-center justify-content-center hover-scale border-0 text-black shadow-sm philosophy-btn"
+                        style={{
+                            backgroundColor: '#EEF430',
+                            borderRadius: '6px'
+                        }}
                     >
                         View our Portfolio →
                     </Link>
+
                     <Link
                         href="/solutionservice"
-                        className="btn fw-bold d-flex align-items-center justify-content-center hover-scale border-0 text-black shadow-sm"
-                        style={{ backgroundColor: '#EEF430', width: '200px', height: '35px', borderRadius: '6px' }}
+                        className="btn fw-bold d-flex align-items-center justify-content-center hover-scale border-0 text-black shadow-sm philosophy-btn"
+                        style={{
+                            backgroundColor: '#EEF430',
+                            borderRadius: '6px'
+                        }}
                     >
                         Work With Us →
                     </Link>
@@ -102,14 +139,34 @@ export default function WebDevelopmentPhilosophy() {
                 .hover-scale {
                     transition: transform 0.3s ease;
                 }
+
                 .hover-scale:hover {
                     transform: scale(1.05);
                 }
+
                 .transition-hover {
                     transition: background-color 0.3s ease;
                 }
+
                 .transition-hover:hover {
                     background-color: rgba(0,0,0,0.02) !important;
+                }
+
+                .philosophy-btn {
+                    width: 200px;
+                    height: 42px;
+                    font-size: 14px;
+                }
+
+                @media (max-width: 768px) {
+                    .philosophy-btn {
+                        width: 100%;
+                        max-width: 280px;
+                    }
+
+                    .philosophy-card {
+                        padding: 1rem;
+                    }
                 }
             `}</style>
         </section>

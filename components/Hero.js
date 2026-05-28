@@ -4,8 +4,8 @@ export default function Hero() {
       <div className="container px-5 py-5">
         <div className="hero-box">
           <div className="row align-items-center">
-            <div className="col-lg-6">
-              <h1>
+            <div className=" col-lg-6">
+              <h1 class="h1" >
                 Technology Built for the <br />
                 Way People Actually Work
               </h1>

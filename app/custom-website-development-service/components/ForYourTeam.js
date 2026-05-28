@@ -11,29 +11,53 @@ const points = [
 export default function ForYourTeam() {
     return (
         <>
+            <section className="container-fluid mb-5 py-5">
+                <div className="container py-lg-5 px-3 px-md-4" style={{ width: '90%' }}>
 
-            <section className="container-fluid mb-5 py-5" >
-                <div className="container py-lg-5" style={{ width: '90%' }}>
-
-                    {/* Top Heading */}<div class="text-center">
-                        <h1 style={{ backgroundColor: "yellow", textAlign: "center", paddingTop: "2%", paddingBottom: "2%", marginLeft: "15%", marginRight: "15%", fontSize: "200%" }}>
+                    {/* Top Heading */}
+                    <div className="text-center">
+                        <h1
+                            style={{
+                                backgroundColor: "yellow",
+                                textAlign: "center",
+                                paddingTop: "2%",
+                                paddingBottom: "2%",
+                                marginLeft: "5%",
+                                marginRight: "5%",
+                                fontSize: "clamp(22px, 4vw, 32px)"
+                            }}
+                        >
                             Two Sides of the Same System
                         </h1>
                     </div>
-                    <div className="text-center mb-5 mt-4">
-                        <h2 className="fw-bold" style={{ color: '#014421', fontSize: '25px' }}>
+
+                    <div className="text-center mb-4 mt-4">
+                        <h2
+                            className="fw-bold"
+                            style={{
+                                color: '#014421',
+                                fontSize: 'clamp(20px, 4vw, 25px)'
+                            }}
+                        >
                             For Your Team
                         </h2>
-
                     </div>
-                    <h1 className="mt-3 fw-semibold fst-italic lh-tight text-dark "
-                        style={{ fontSize: '20px', maxWidth: '900px', textAlign: "left", marginBottom: "-6%", marginTop: "5%", }}>
+
+                    <h1
+                        className="mt-3 fw-semibold fst-italic lh-tight text-dark text-center text-lg-start"
+                        style={{
+                            fontSize: 'clamp(18px, 3vw, 20px)',
+                            maxWidth: '900px',
+                            marginBottom: '2rem'
+                        }}
+                    >
                         Your website shouldn’t create operational dependency
                     </h1>
 
                     {/* Main Content Row */}
-                    <div className="row g-4 g-lg-5 align-items-start mt-4">
+                    <div className="row g-4 g-lg-5 align-items-start mt-2">
 
+                        {/* Image */}
                         <div className="col-12 col-lg-7">
                             <div className="rounded-3 overflow-hidden shadow-sm">
                                 <Image
@@ -42,35 +66,65 @@ export default function ForYourTeam() {
                                     height={700}
                                     alt="Team Image"
                                     className="img-fluid w-100 object-fit-cover"
-                                    style={{ height: "600px", width: "800px" }}
+                                    style={{
+                                        height: 'auto',
+                                        maxHeight: '600px'
+                                    }}
                                 />
                             </div>
                         </div>
 
+                        {/* Content */}
+                        <div className="col-12 col-lg-5">
 
-
-                        <div className="col-12 col-lg-5" >
-                            <p className="fs-5 lh-base mb-4" style={{ color: '#1f1f1f', fontSize: '15px' }}>
+                            <p
+                                className="lh-base mb-4"
+                                style={{
+                                    color: '#1f1f1f',
+                                    fontSize: 'clamp(14px, 2vw, 15px)'
+                                }}
+                            >
                                 If every update requires developer support,
                                 momentum slows. If systems don’t connect, your team
                                 compensates manually.
                             </p>
 
-                            <h3 className="fw-bold lh-snug mb-4" style={{ fontSize: '15px' }}>
+                            <h3
+                                className="fw-bold lh-snug mb-4"
+                                style={{
+                                    fontSize: 'clamp(14px, 2vw, 15px)'
+                                }}
+                            >
                                 Well-structured custom website development restores control.
                             </h3>
 
-                            <p className="fst-italic lh-lg mb-4" style={{ color: '#8d8d8d', fontSize: '15px' }}>
+                            <p
+                                className="fst-italic lh-lg mb-4"
+                                style={{
+                                    color: '#8d8d8d',
+                                    fontSize: 'clamp(14px, 2vw, 15px)'
+                                }}
+                            >
                                 We build custom websites that integrate your tools,
                                 simplify workflows and give your team structured control.
                             </p>
 
-                            {/* Negative Points List */}
+                            {/* Negative Points */}
                             <div className="d-flex flex-column gap-3 mb-5">
                                 {points.map((item, idx) => (
                                     <div key={idx} className="d-flex align-items-center gap-3">
-                                        <RxCross2 className="text-danger flex-shrink-0" size={28} style={{ strokeWidth: '1.5', fontSize: '15px' }} />
-                                        <h4 className="mb-0 fw-semibold" style={{ color: '#7a7a7a', fontSize: '1.2rem', fontSize: '15px' }}>
+                                        <RxCross2
+                                            className="text-danger flex-shrink-0"
+                                            size={22}
+                                            style={{ strokeWidth: '1.5' }}
+                                        />
+                                        <h4
+                                            className="mb-0 fw-semibold"
+                                            style={{
+                                                color: '#7a7a7a',
+                                                fontSize: 'clamp(14px, 2vw, 15px)'
+                                            }}
+                                        >
                                             {item}
                                         </h4>
                                     </div>
@@ -79,24 +133,41 @@ export default function ForYourTeam() {
 
                             {/* Result Box */}
                             <div className="bg-black p-4 rounded-4 shadow">
-                                <h3 className="fw-bold mb-2" style={{ color: '#EEF430', fontSize: '1.4rem', fontSize: '15px' }}>
+                                <h3
+                                    className="fw-bold mb-2"
+                                    style={{
+                                        color: '#EEF430',
+                                        fontSize: 'clamp(14px, 2vw, 15px)'
+                                    }}
+                                >
                                     The result is simple:
                                 </h3>
-                                <p className="text-white mb-0 fs-5 text-nowrap" fs-1>
+
+                                <p
+                                    className="text-white mb-0"
+                                    style={{
+                                        fontSize: 'clamp(14px, 2vw, 18px)'
+                                    }}
+                                >
                                     You’ll gain clarity, efficiency and full autonomy.
                                 </p>
-                                {/* <p className="text-white mb-0 fs-5 lh-relaxed" fs-1 >
-                                You’ll gain clarity, efficiency and full autonomy.
-                            </p> */}
                             </div>
-                            <div class="d-flex gap-3" style={{ marginTop: "20px" }}>
-                                <button class="btn  text-dark" style={{ backgroundColor: "yellow" }}>
-                                    View Our Portfolio  →
-                                </button>
-                                <button class="btn  text-dark" style={{ backgroundColor: "yellow" }}>
-                                    Work With Us  →
+
+                            {/* Buttons */}
+                            <div className="d-flex flex-column flex-sm-row gap-3 mt-4">
+                                <button
+                                    className="btn text-dark w-100 w-sm-auto"
+                                    style={{ backgroundColor: "yellow" }}
+                                >
+                                    View Our Portfolio →
                                 </button>
 
+                                <button
+                                    className="btn text-dark w-100 w-sm-auto"
+                                    style={{ backgroundColor: "yellow" }}
+                                >
+                                    Work With Us →
+                                </button>
                             </div>
 
                         </div>
