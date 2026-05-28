@@ -1428,3 +1428,10 @@ span {
     overflow-y: auto;
 }
 }
+
+
+.big-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
