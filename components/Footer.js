@@ -1,4 +1,4 @@
-import "../app/footer.css";
+
 import Image from "next/image";
 import {
   FaFacebookF,

@@ -250,6 +250,7 @@ span {
   min-height: 450px;
   background: url("/images/homebanner.png") no-repeat center center;
   background-size: cover;
+  height: 100vh;
 }
 
 .hero-box {
