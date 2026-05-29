@@ -8,7 +8,7 @@ export default function BannerPage() {
             <section
                 className="container-fluid  ps-3 ps-lg-5 d-flex flex-column justify-content-center position-relative overflow-hidden"
                 style={{
-                    Height: '85vh',
+                    height: '85vh',
                     backgroundImage: "url('/system/hero.png')",
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: 'center',
