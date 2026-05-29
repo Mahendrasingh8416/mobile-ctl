@@ -11,9 +11,9 @@ import Footer from "../../components/Footer";
 
 export default function CustomApp() {
     return (
-        <div className="container-fluid p-0 container-outer">
+        <div className="">
             
-            <div className="container bg-white p-0">
+            <div className="container-fluid  bg-white p-0">
                 
                 {/* Global Header */}
                 <Header />

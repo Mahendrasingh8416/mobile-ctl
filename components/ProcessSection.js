@@ -7,7 +7,7 @@ export default function ProcessContainer() {
   <div className="step-wrapper right">
     <div className="card">
       <div className="accent-bar left-accent"></div>
-      <div className="content">
+      <div className="content ">
         <span className="step-label">STEP 1:</span>
         <h2 className="title">We Listen for the "Why"</h2>
         <p className="description">
