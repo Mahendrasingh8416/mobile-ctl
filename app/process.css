@@ -67,10 +67,7 @@
    CONTENT
 ========================= */
 .content {
-  padding-left: 40px;
-    padding-right: 25px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+ padding: 10px 15px;
 }
 
 /* Step label */
@@ -160,6 +157,12 @@
 ========================= */
 @media (max-width: 768px) {
 
+  :root {
+  --dark-green: #000000;
+  --bright-yellow: #EEF430;
+  --text-gray: #000;
+}
+
 
   .step-wrapper {
     justify-content: center !important;
@@ -178,4 +181,16 @@
   .title {
     font-size: 20px;
   }
+  .content{
+   border-left:solid rgb(255, 255, 0) 5px ;
+  }
+  .accent-bar {
+  width: 25px;
+background-color: #fff;
+  flex-shrink: 0;
+}
+.line {
+  display: none;
+}
+
 }

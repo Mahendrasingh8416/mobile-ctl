@@ -133,7 +133,7 @@ span {
   max-width: 1280px;
   margin: 0 auto;
   width: 100%;
-  background-color: #ffffff;
+  background-color:#eef430;
 }
 
 /* app/components/Banner.css */
@@ -248,7 +248,7 @@ span {
 
 .hero {
   min-height: 450px;
-  background: url("/images/banner.webp") no-repeat center center;
+  background: url("/images/homebanner.png") no-repeat center center;
   background-size: cover;
 }
 
@@ -265,15 +265,15 @@ span {
   color: #000;
 }
 
-.hero p {
-  margin: 20px 0;
+/* .hero p { */
+  /* margin: 20px 0;
   font-family: "Albert Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 400;c`
   font-style: normal;
   font-size: 19px;
   letter-spacing: 0;
   color: #000;
-}
+} */
 
 .hero-img {
   width: 100%;
@@ -506,9 +506,7 @@ span {
    5. SPECIALTY COMPONENTS (Clip-paths & Banners)
    ========================================================================== */
 
-.container-blueprint {
-  margin: 20px 80px;
-}
+
 
 .blueprint-header {
   background: #000;
@@ -1134,6 +1132,7 @@ span {
 
   .banner-container {
     padding: 50px 25px;
+    background: yellow;
   }
 
   .content-wrapper h2 {
@@ -1339,6 +1338,12 @@ span {
     flex-direction: column;
     gap: 30px;
   }
+ .container{
+  display: block;
+  }
+  .hero{
+    display: none;
+  }
 }
 
 /* ===============================================================================*/
@@ -1375,7 +1380,7 @@ span {
 
 @media (min-width: 1200px) {
   .nav-custom {
-    max-width: 1200px;
+    width: 100%;
   }
 }
 
