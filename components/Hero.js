@@ -35,7 +35,7 @@ export default function Hero() {
         
         {/* Top Section */}
         <div
-          className="d-flex flex-column align-items-center text-center px-3 justify-content-center"
+          className="d-flex flex-column  text-center px-3 "
           style={{
             backgroundImage: "url('/images/mobilebanner3.png')",
             backgroundSize: "cover",
@@ -43,7 +43,7 @@ export default function Hero() {
             minHeight: "70vh",
           }}
         >
-          <h1 className="fw-bold display-6 albert-font">
+          <h1 className="fw-bold display-6 albert-font ">
             Technology Built for the
             <br />
             Way People Actually Work
