@@ -2,40 +2,28 @@ import Image from 'next/image'; // Agar Next.js use kar rahe ho toh
 
 export default function Hero() {
   return (
-    <>
-      {/* ========================================================================= */}
-      {/* 1. DESKTOP HERO SECTION (Visible on MD screens and up, Hidden on Mobile) */}
-      {/* ========================================================================= */}
-      <section className="hero d-none d-md-block">
-        <div className="container px-5 py-5">
-          <div className="hero-box">
-            <div className="row align-items-center">
-              {/* Left Side Content */}
-              <div className="col-lg-6">
-                <h1 className="fw-bold mb-4 albert-font">
-                  Technology Built for the <br />
-                  Way People Actually Work
-                </h1>
+    <section className="hero">
+      <div className="container px-5 py-5">
+        <div className="hero-box">
+          <div className="row align-items-center">
+            <div className=" col-lg-6">
+              <h1 class="h1" >
+                Technology Built for the <br />
+                Way People Actually Work
+              </h1>
 
-                <p className="text-muted mb-4 fs-5" style={{ maxWidth: "500px" }}>
-                  We bridge the gap between complex engineering and human
-                  intuition to build tech that users actually enjoy using.
-                </p>
+              <p>
+                We bridge the gap between complex engineering and human
+                intuition to build tech that users actually enjoy using.
+              </p>
 
-                <div className="d-flex gap-3">
-                  <button className="custom-btn">
-                    View Our Portfolio
-                  </button>
-                  <button className="custom-btn">
-                    Work With Us
-                  </button>
-                </div>
-              </div>
-              
-              {/* Right Side Image (Agar CSS background use nahi kar rahe toh yahan image add kar sakte ho) */}
-              <div className="col-lg-6">
-                {/* Desktop Background image CSS file `.hero` mein managed hai */}
-              </div>
+            <button className="custom-btn me-2">
+  View Our Portfolio
+</button>
+
+<button className="custom-btn">
+  Work With Us
+</button>
             </div>
           </div>
         </div>

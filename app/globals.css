@@ -1435,8 +1435,63 @@ span {
 }
 
 
-.big-div{
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mahendra */
+/* 
+@media (min-width: 320px) and (max-width: 375px) {
+  .blueprint-header{
+    font-size:20px;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 425px) {
+  .blueprint-header{
+    font-size:22px;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 768px) {
+  .blueprint-header{
+    font-size:25px;
+  }
+} */
+
+/* @media (max-width: 768px) {
+  .blueprint-header{
+    font-size:45px;
+  }
+} */
+/* ======= */
+/* .big-div{
   display: flex;
   justify-content: center;
   align-items: center;
 }
+>>>>>>> d3ced6f95d8ebe7c86ea0afb061d29d3bf970944 */

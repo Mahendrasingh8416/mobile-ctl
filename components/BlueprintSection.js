@@ -4,7 +4,7 @@ export default function BlueprintSection() {
   return (
     <>
       {/* Header */}
-      <div className="blueprint-header">
+      <div className="blueprint-header" >
         <span style={{ color: "#EEF430" }}>
           The Tech Blueprint for the
         </span>
