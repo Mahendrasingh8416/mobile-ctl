@@ -12,15 +12,16 @@ const sectors = [
 export default function SectorsWeBuild() {
   return (
     <section className="container-fluid p-0 pt-0 d-flex flex-column align-items-center gap-0">
+      
       {/* Header Title Bar */}
-      <div className="container d-flex justify-content-center">
+      <div className="container d-flex justify-content-center px-3">
         <div
-          className="col-12 col-md-8 col-lg-7 bg-yellow py-3 d-flex justify-content-center align-items-center"
+          className="col-12 col-md-8 col-lg-7 py-3 d-flex justify-content-center align-items-center"
           style={{ backgroundColor: "#eef430" }}
         >
           <h1
-            className="fw-bold mb-0 text-center"
-            style={{ fontSize: "calc(1.1rem + 1vw)" }}
+            className="fw-bold mb-0 text-center px-2"
+            style={{ fontSize: "clamp(1.2rem, 3vw, 2rem)" }}
           >
             Sectors We Build For
           </h1>
@@ -28,10 +29,10 @@ export default function SectorsWeBuild() {
       </div>
 
       {/* Subheading */}
-      <div className=" text-center px-3">
+      <div className="text-center px-3 px-md-4 my-3">
         <h3
           className="fw-normal mb-0"
-          style={{ fontSize: "calc(0.9rem + 0.2vw)" }}
+          style={{ fontSize: "clamp(0.9rem, 2vw, 1.3rem)" }}
         >
           <span className="fw-bold fst-italic">
             Different industries. Same friction. Same fix.
@@ -45,14 +46,14 @@ export default function SectorsWeBuild() {
 
       {/* Sector Grid */}
       <div
-        className="container my-0 "
-        style={{ width: "70%", maxWidth: "1200px" }}
+        className="container my-4 px-3"
+        style={{ width: "100%", maxWidth: "1200px" }}
       >
-        <div className="row g-4 justify-content-center">
+        <div className="row g-3 g-md-4 justify-content-center">
           {sectors.map((sector, index) => (
-            <div key={index} className="col-6 col-md-4">
+            <div key={index} className="col-6 col-md-4 col-lg-3">
               <div
-                className="d-flex flex-column justify-content-center align-items-center py-0 px-2 h-100 shadow-sm transition-hover"
+                className="d-flex flex-column justify-content-center align-items-center py-3 px-2 h-100 shadow-sm transition-hover"
                 style={{
                   backgroundColor: "#f5f5f5",
                   borderRadius: "4px",
@@ -60,7 +61,7 @@ export default function SectorsWeBuild() {
                 }}
               >
                 <div
-                  className="mb-2"
+                  className="mb-2 d-flex justify-content-center"
                   style={{ width: "100%", maxWidth: "120px" }}
                 >
                   <Image
@@ -75,7 +76,7 @@ export default function SectorsWeBuild() {
 
                 <h4
                   className="fw-semibold mb-0 text-center"
-                  style={{ fontSize: "1rem" }}
+                  style={{ fontSize: "clamp(0.9rem, 2vw, 1rem)" }}
                 >
                   {sector.name}
                 </h4>
@@ -84,11 +85,15 @@ export default function SectorsWeBuild() {
           ))}
         </div>
       </div>
+
       {/* Bottom Statement */}
-      <div className="mb-5 text-center px-3">
+      <div className="mb-4 mb-md-5 text-center px-3">
         <h2
-          className="fw-bold mx-auto fst-italic" 
-          style={{ fontSize: "calc(0.9rem + 0.3vw)", maxWidth: "700px" }}
+          className="fw-bold mx-auto fst-italic"
+          style={{
+            fontSize: "clamp(1rem, 2.5vw, 1.4rem)",
+            maxWidth: "700px",
+          }}
         >
           The industries may differ, but the goal stays the same:
           <span className="d-none d-md-inline">
@@ -109,13 +114,18 @@ export default function SectorsWeBuild() {
 
       <style jsx>{`
         .transition-hover {
-          transition:
-            transform 0.3s ease,
-            box-shadow 0.3s ease;
+          transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .transition-hover:hover {
           transform: translateY(-5px);
           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+        }
+
+        @media (max-width: 576px) {
+          .transition-hover {
+            padding: 16px 10px !important;
+          }
         }
       `}</style>
     </section>
