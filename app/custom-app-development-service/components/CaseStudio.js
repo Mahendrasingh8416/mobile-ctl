@@ -2,11 +2,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BsArrowRight, BsChevronLeft, BsChevronRight } from "react-icons/bs";
-// 1. Import Swiper React components and modules
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 
-// 2. Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -35,31 +33,30 @@ const slides = [
 export default function CaseStudies() {
   return (
     <section
-      className="container-fluid mt-5 position-relative"
+      className="container-fluid mt-4 mt-md-5 position-relative px-0"
       style={{ backgroundColor: "#fff" }}
     >
-      {/* Angled Black Header Background */}
-
       <section className="container-fluid p-0 position-relative">
         {/* Header Banner */}
         <div className="banners-containers banner-container">
           <div className="content-wrapper">
-            <h2 className="pt-3">Case Studies</h2>
+            <h2 className="pt-3 text-center text-md-start">Case Studies</h2>
           </div>
         </div>
 
         <div className="position-relative">
           <div
             className="row justify-content-center align-items-center position-relative"
-            style={{ position: "relative !important", top: "-52px" }}
+            style={{ top: window.innerWidth < 768 ? "-20px" : "-52px" }}
           >
-            {/* Custom Navigation Buttons */}
+            {/* Navigation Buttons */}
             <button
               className="case-prev btn border-0 p-0 text-secondary opacity-50 position-absolute start-0 z-3 d-none d-lg-block"
               style={{ top: "35%" }}
             >
               <BsChevronLeft size={40} />
             </button>
+
             <button
               className="case-next btn border-0 p-0 text-secondary opacity-50 position-absolute end-0 z-3 d-none d-lg-block"
               style={{ top: "35%" }}
@@ -67,10 +64,10 @@ export default function CaseStudies() {
               <BsChevronRight size={40} />
             </button>
 
-            <div className="col-12 col-md-10 col-lg-8">
+            <div className="col-12 col-md-11 col-lg-8 px-3 px-md-0">
               <Swiper
                 modules={[Navigation, Pagination]}
-                spaceBetween={30}
+                spaceBetween={20}
                 slidesPerView={1}
                 loop={true}
                 navigation={{
@@ -84,10 +81,10 @@ export default function CaseStudies() {
               >
                 {slides.map((slide, index) => (
                   <SwiperSlide key={index}>
-                    {/* Featured Image */}
+                    {/* Image */}
                     <div className="position-relative w-100 shadow-lg">
                       <Image
-                        className="w-100 h-auto d-block"
+                        className="w-100 h-auto d-block img-fluid"
                         src={slide.image}
                         width={994}
                         height={388}
@@ -96,24 +93,25 @@ export default function CaseStudies() {
                       />
                     </div>
 
-                    {/* Content Box */}
+                    {/* Content */}
                     <div
-                      className="p-4 p-md-5 d-flex flex-column gap-3 align-items-start"
+                      className="p-3 p-md-5 d-flex flex-column gap-3 align-items-start"
                       style={{ backgroundColor: "#d9d9d9" }}
                     >
-                      <h2 className="fs-5 fw-bold fst-italic mb-0 text-dark">
+                      <h2 className="fs-6 fs-md-5 fw-bold fst-italic mb-0 text-dark">
                         {slide.title}
                       </h2>
+
                       <p
                         className="fw-normal mb-2 lh-base text-dark"
-                        style={{ fontSize: "15px" }}
+                        style={{ fontSize: "14px" }}
                       >
                         {slide.description}
                       </p>
 
                       <Link
                         href="/"
-                        className="btn fw-bold px-4 py-2 d-inline-flex align-items-center gap-2 border-0 transition-scale"
+                        className="btn fw-bold px-3 px-md-4 py-2 d-inline-flex align-items-center gap-2 border-0 transition-scale"
                         style={{
                           backgroundColor: "#EEF430",
                           fontSize: "13px",
@@ -127,8 +125,7 @@ export default function CaseStudies() {
                 ))}
               </Swiper>
 
-              {/* Pagination Container */}
-              <div className="custom-pagination d-flex justify-content-center gap-2 mt-4"></div>
+              <div className="custom-pagination d-flex justify-content-center gap-2 mt-3 mt-md-4"></div>
             </div>
           </div>
         </div>
@@ -136,20 +133,30 @@ export default function CaseStudies() {
 
       <style jsx global>{`
         .custom-pagination .swiper-pagination-bullet {
-          width: 12px;
-          height: 12px;
+          width: 10px;
+          height: 10px;
           background-color: #fff;
           border: 1px solid #6c757d;
           opacity: 1;
         }
+
         .custom-pagination .swiper-pagination-bullet-active {
           background-color: #bbb !important;
         }
+
         .transition-scale {
           transition: transform 0.2s ease;
         }
+
         .transition-scale:hover {
           transform: scale(1.03);
+        }
+
+        @media (max-width: 768px) {
+          .transition-scale {
+            width: 100%;
+            justify-content: center;
+          }
         }
       `}</style>
     </section>

@@ -14,10 +14,16 @@ export default function StrongIntegration() {
         <section className="container-fluid py-5" style={{ backgroundColor: '#f3f3f3' }}>
 
             {/* Inner Gray Wrapper */}
-            <div className="container p-4 p-md-5   position-relative" style={{ backgroundColor: '#e9e9e9', width: "90%" }}>
+            <div
+                className="container p-3 p-md-5 position-relative"
+                style={{ backgroundColor: '#e9e9e9', width: "90%" }}
+            >
 
                 {/* Heading */}
-                <h1 className="display-6 fw-semibold text-black mb-5" style={{ fontSize: 'calc(1.5rem + 1.2vw)' }}>
+                <h1
+                    className="fw-semibold text-black mb-5"
+                    style={{ fontSize: 'clamp(1.6rem, 3vw, 3rem)' }}
+                >
                     What Strong Integrations Deliver
                 </h1>
 
@@ -25,39 +31,46 @@ export default function StrongIntegration() {
                 <div className="row align-items-center position-relative z-1">
 
                     {/* Floating Black Background Element */}
-                    <div className=" position-absolute start-50 translate-middle-x w-100 d-none d-lg-block"
-                        style={{ bottom: '11%', height: '180px', zIndex: -1, marginBottom: "-20px" }}>
+                    <div
+                        className="position-absolute start-50 translate-middle-x w-100 d-none d-lg-block"
+                        style={{ bottom: '11%', height: '180px', zIndex: -1 }}
+                    >
                         <Image
-                            className="  object-fit"
                             src='/system/black.png'
                             alt="Background Accent"
                             width={1315}
                             height={210}
-                            style={{ marginLeft: "-123px", marginRight: "-100px" }}
+                            style={{ width: "100%", height: "auto" }}
                         />
                     </div>
 
                     {/* Left Image Column */}
-               <div className="col-12 col-lg-5 mb-4 mb-lg-0">
-    <div className="position-relative h-100" style={{ minHeight: '350px' }}>
-        <Image
-            src="/system/strong.png"
-            alt="Strong Integration"
-            fill
-            className="rounded-4 shadow-sm object-fit-cover"
-            priority
-        />
-    </div>
-</div>
+                    <div className="col-12 col-lg-5 mb-4 mb-lg-0">
+                        <div
+                            className="position-relative h-100"
+                            style={{ minHeight: '250px', height: 'clamp(250px, 40vw, 420px)' }}
+                        >
+                            <Image
+                                src="/system/strong.png"
+                                alt="Strong Integration"
+                                fill
+                                className="rounded-4 shadow-sm object-fit-cover"
+                                priority
+                            />
+                        </div>
+                    </div>
 
                     {/* Right Cards Column */}
                     <div className="col-12 col-lg-7">
-                        <div className="d-flex flex-column gap-3 pe-lg-5 ">
+                        <div className="d-flex flex-column gap-3 pe-lg-5">
                             {integrationData.map((item, idx) => (
                                 <div
                                     key={idx}
-                                    className="bg-white p-4 shadow-sm fw-bold border-0"
-                                    style={{ fontSize: '18px', borderLeft: '5px solid #EEF430' }}
+                                    className="bg-white p-3 p-md-4 shadow-sm fw-bold border-0"
+                                    style={{
+                                        fontSize: 'clamp(15px, 1.5vw, 18px)',
+                                        borderLeft: '5px solid #EEF430'
+                                    }}
                                 >
                                     {item}
                                 </div>
@@ -67,11 +80,21 @@ export default function StrongIntegration() {
                 </div>
 
                 {/* Bottom Content */}
-                <div className="mt-3 pt-3">
-                    <p className="text-secondary fs-5 mb-1">
+                <div className="mt-4 pt-3">
+                    <p
+                        className="text-secondary mb-2"
+                        style={{ fontSize: 'clamp(16px, 2vw, 22px)' }}
+                    >
                         That’s the difference system integration makes.
                     </p>
-                    <h2 className="fw-normal mb-4" style={{ maxWidth: '800px', fontSize: 'calc(1.2rem + 0.8vw)' }}>
+
+                    <h2
+                        className="fw-normal mb-4"
+                        style={{
+                            maxWidth: '800px',
+                            fontSize: 'clamp(1.2rem, 2vw, 2.2rem)'
+                        }}
+                    >
                         Let’s build the integration layer that powers your growth.
                     </h2>
 
@@ -80,14 +103,25 @@ export default function StrongIntegration() {
                         <Link
                             href="/"
                             className="btn fw-bold px-4 py-2 d-flex align-items-center justify-content-center transition-scale"
-                            style={{ backgroundColor: '#EEF430', minWidth: '180px', height: '48px', borderRadius: '0' }}
+                            style={{
+                                backgroundColor: '#EEF430',
+                                minWidth: '180px',
+                                height: '48px',
+                                borderRadius: '0'
+                            }}
                         >
                             View our Portfolio →
                         </Link>
+
                         <Link
                             href="/solutionservice"
                             className="btn fw-bold px-4 py-2 d-flex align-items-center justify-content-center transition-scale"
-                            style={{ backgroundColor: '#EEF430', minWidth: '180px', height: '48px', borderRadius: '0' }}
+                            style={{
+                                backgroundColor: '#EEF430',
+                                minWidth: '180px',
+                                height: '48px',
+                                borderRadius: '0'
+                            }}
                         >
                             Work With Us →
                         </Link>
@@ -96,12 +130,24 @@ export default function StrongIntegration() {
             </div>
 
             <style jsx>{`
-                .transition-scale { transition: all 0.3s ease; }
-                .transition-scale:hover { transform: scale(1.05); }
-                
+                .transition-scale {
+                    transition: all 0.3s ease;
+                }
+
+                .transition-scale:hover {
+                    transform: scale(1.05);
+                }
+
                 @media (max-width: 991px) {
-                    /* On mobile, the black image usually looks messy, so we hide or adjust it */
-                    .position-absolute { display: none; }
+                    .position-absolute {
+                        display: none;
+                    }
+                }
+
+                @media (max-width: 576px) {
+                    .transition-scale {
+                        width: 100%;
+                    }
                 }
             `}</style>
         </section>
